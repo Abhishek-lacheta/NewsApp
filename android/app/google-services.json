@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240603839038",
+    "project_id": "newsapp-18b8d",
+    "storage_bucket": "newsapp-18b8d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240603839038:android:4bab36fa1ace4fb0c8ef6f",
+        "android_client_info": {
+          "package_name": "com.encoresky.newsapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXCbC0MN5pS7pjFVpPVE1iNo2CKxPg16Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
