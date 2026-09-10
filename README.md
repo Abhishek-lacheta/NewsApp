@@ -1,79 +1,107 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# NewsApp
 
-# Getting Started
+A React Native mobile application that allows users to browse breaking news, explore different news categories, and save their favorite articles and channels. I built this project to practice mobile development, state management, and API integration.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+## Screenshots
 
-## Step 1: Start the Metro Server
+| Breaking News | Channel List | Favorite Articles | Favorite Channels |
+| :---: | :---: | :---: | :---: |
+| ![Breaking News](src/screenshots/BreakingNews.jpg) | ![Channel List](src/screenshots/ChannelList.jpg) | ![Favorite Articles](src/screenshots/FavoriteArticles.jpg) | ![Favorite Channels](src/screenshots/FavoriteChannels.jpg) |
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+## Features
 
-To start Metro, run the following command from the _root_ of your React Native project:
+* Browse breaking news
+* Browse news by category (Business, Education, Science, Sports)
+* View a list of news channels
+* Read full articles directly in the app (via WebView)
+* Bookmark favorite articles
+* Save favorite news channels
+* User authentication
 
-```bash
-# using npm
-npm start
+## Tech Stack
 
-# OR using Yarn
-yarn start
+* **React Native** (UI Framework)
+* **JavaScript** 
+* **React Navigation** (Native Stack & Bottom Tabs)
+* **Redux Toolkit & Redux Persist** (State management and local storage)
+* **Firebase** (Auth, Firestore, Storage)
+* **Axios & RSS Parser** (Data fetching and parsing)
+* **React Native Paper** (UI components)
+* **React Native WebView** (In-app browser)
+
+## Project Structure
+
+```text
+src/
+├── appnavigation/    # Navigation setup (Stack and Bottom Tabs)
+├── redux/            # State management (slices and store configuration)
+├── screens/          # UI screens (Home, Categories, Favorites, Auth, etc.)
+└── screenshots/      # App screenshots for documentation
 ```
 
-## Step 2: Start your Application
+## Getting Started
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+### Prerequisites
 
-### For Android
+* Node.js (>= 18)
+* React Native development environment (Android Studio / Xcode)
+
+### Installation
+
+Clone the repository and install dependencies:
 
 ```bash
-# using npm
-npm run android
-
-# OR using Yarn
-yarn android
+git clone <repository-url>
+cd NewsApp
+npm install
 ```
 
-### For iOS
+### iOS
+
+Install CocoaPods dependencies:
 
 ```bash
-# using npm
+cd ios
+pod install
+cd ..
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+### Android
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+Run the app on an Android emulator or connected device:
 
-## Step 3: Modifying your App
+```bash
+npm run android
+```
 
-Now that you have successfully run the app, let's modify it.
+## Configuration
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+This project relies on Firebase. You will need to set up your own Firebase project to fully use the authentication and database features.
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+1. Create a project in the [Firebase Console](https://console.firebase.google.com/).
+2. Add an Android app and place the `google-services.json` file inside `android/app/`.
+3. Add an iOS app and place the `GoogleService-Info.plist` file inside the `ios/` folder.
+4. Enable Authentication and Firestore in your Firebase project.
 
-## Congratulations! :tada:
+## What I Learned
 
-You've successfully run and modified your React Native App. :partying_face:
+Building this project helped me gain practical experience with several React Native concepts:
 
-### Now what?
+* **Navigation**: Implementing bottom tabs and native stack navigation together.
+* **State Management**: Using Redux Toolkit for global state and Redux Persist to keep saved articles and channels available offline.
+* **Networking**: Fetching external feeds using Axios and parsing RSS data.
+* **Firebase Integration**: Setting up and using Firebase for user authentication and backend database storage.
+* **In-App Browsing**: Using WebView to load full articles without leaving the application.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+## Future Improvements
 
-# Troubleshooting
+* Add a search functionality to find specific news or channels
+* Improve UI for loading and error states
+* Add offline support for recently viewed news
+* Implement dark mode support
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Author
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+**Abhishek Lacheta**  
+Mobile Application Developer | React Native & Flutter
