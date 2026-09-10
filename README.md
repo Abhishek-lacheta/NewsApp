@@ -56,9 +56,17 @@ cd NewsApp
 npm install
 ```
 
+### Start Metro Bundler
+
+First, you will need to start Metro, the JavaScript bundler that ships with React Native:
+
+```bash
+npx react-native start
+```
+
 ### iOS
 
-Install CocoaPods dependencies:
+Install CocoaPods dependencies and run the app:
 
 ```bash
 cd ios
